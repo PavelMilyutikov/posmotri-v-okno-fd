@@ -14,7 +14,7 @@ html {
   align-items: center;
   margin: auto;
   color: #fff;
-  font-family: 'Fira Sans Condensed', sans-serif;
+  font-family: 'Fira Sans Condensed', 'Arial Narrow', Arial, sans-serif;
   font-size: 18px;
   background-color: #1b1919;
   inline-size: 1200px;
@@ -74,7 +74,6 @@ ol {
   align-items: flex-end;
   gap: 30px;
   width: 1140px;
-  height: 534px;
 }
 
 .content__details {
@@ -82,11 +81,10 @@ ol {
   flex-direction: column;
   gap: 26px;
   width: 399px;
-  height: 100%;
 }
 
 .title {
-  font-family: Oswald;
+  font-family: Oswald, 'Arial Narrow', Arial, sans-serif;
   font-weight: 700;
   font-size: 75px;
   line-height: 94%;
@@ -113,7 +111,6 @@ ol {
 
 .content__list-item {
   width: 390px;
-  height: 103px;
 }
 
 .content__card-link {
@@ -156,7 +153,7 @@ ol {
 .content__video-card-title {
   width: 100%;
   overflow: hidden;
-  font-family: Oswald;
+  font-family: Oswald, 'Arial Narrow', Arial, sans-serif;
   font-weight: 700;
   font-size: 30px;
   text-transform: uppercase;
@@ -165,13 +162,18 @@ ol {
 }
 
 .content__video-card-description {
+  display: -webkit-box;
+  overflow: hidden;
   font-weight: 400;
   line-height: 16.2px;
-  line-clamp: 4;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
 }
 
 .content__video-card-thumbnail {
   width: 194px;
+  height: 103px;
 }
 
 /* ============================= */
@@ -194,6 +196,7 @@ ol {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  object-position: center;
 }
 
 /* ============================= */
@@ -212,6 +215,7 @@ ol {
 }
 
 .search-form__fieldset-title {
+  margin-bottom: 5px;
   font-weight: 400;
   font-size: 18px;
 }
@@ -230,18 +234,18 @@ ol {
 }
 
 .search-form__label:has(:focus-visible) {
-  border: 1px solid #fff;
+  outline: 1px solid #fff;
+  outline-offset: 1px;
 }
 
 .search-form__textfield {
   width: 225px;
-  height: 27px;
   border: none;
-  border-top: 1px solid #fff;
-  border-bottom: 1px solid #fff;
+  border-top: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
   outline: none;
   color: #fff;
-  font-family: 'Fira Sans Condensed';
+  font-family: 'Fira Sans Condensed', 'Arial Narrow', Arial, sans-serif;
   font-weight: 400;
   font-size: 18px;
   background-color: #1b1919;
@@ -282,9 +286,9 @@ ol {
 /* ============================= */
 
 .button {
-  border: 1px solid #fff;
+  border: 1px solid currentColor;
   color: #fff;
-  font-family: 'Fira Sans Condensed';
+  font-family: 'Fira Sans Condensed', 'Arial Narrow', Arial, sans-serif;
   font-weight: 700;
   font-size: 18px;
   background-color: transparent;
@@ -305,7 +309,7 @@ ol {
 }
 
 .button:focus-visible {
-  outline: 1px solid #fff;
+  outline: 1px solid currentColor;
   outline-offset: 1px;
 }
 
